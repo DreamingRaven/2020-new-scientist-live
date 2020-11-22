@@ -1,5 +1,6 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage{tikz} % for QR code overlay
 
 % code snippets
 \usepackage{minted}
@@ -55,22 +56,39 @@
 \usecolortheme{rose}
 % \beamerdefaultoverlayspecification{<+->} % this will turn it into slides
 
-\title{New Scientist Live}
-\subtitle{A Journey Through Science, and Life}
-\author{George Onoufriou}
+\title{Artificial Intelligence, Encrypted Deep Learning, Big Data, and Robots}
+\subtitle{New Scientist Live \today}
+\author{George Onoufriou\\(University of Lincoln)}
 \date{\today}
 
 \begin{document}
 
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=1.5cm]{qrcode.png}};
+\end{tikzpicture}}
+
   \frame{\titlepage}
 
   \begin{frame}
-    \frametitle{I am}
-    \begin{itemize}
-        \item Computer/ Data Scientist
-        \item PhD Candidate
-        \item Linux Enthusiast
-    \end{itemize}
+    \frametitle{About}
+    \begin{columns}
+      \begin{column}{0.5\textwidth}
+        \begin{itemize}
+          \item PhD Candidate Computer/ Data Science
+          \item Greek Cypriot
+          \item Privacy and Linux Enthusiast
+        \end{itemize}
+      \end{column}
+      \begin{column}{0.5\textwidth}
+        \begin{figure}[th!]
+          \centering
+          \includegraphics[width=0.8\textwidth]{gh.png}
+          \caption{GitHub profile page where you can come to see my work and chat.}
+          \label{fig:gh}
+        \end{figure}
+      \end{column}
+    \end{columns}
   \end{frame}
 
   \begin{frame}
